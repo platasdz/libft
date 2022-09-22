@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:21:54 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 12:24:52 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 13:04:37 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
 	size_t	i;
-	char	*temp_d;
-	char	*temp_s;
 
 	i = 0;
-	temp_d = (char *) dest;
-	temp_s = (char *) src;
-	while (i < n && temp_s)
+	if (!dest || !src)
+		return (NULL);
+	while (i < n)
 	{
-		temp_d[i] = temp_s[i];
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
 		i++;
 	}
 	return (dest);

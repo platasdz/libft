@@ -6,24 +6,11 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:21:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/16 10:03:12 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 11:45:45 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (*str != 0)
-	{
-		str++;
-		cont++;
-	}
-	return (cont);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

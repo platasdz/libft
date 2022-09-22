@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 09:50:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/20 11:49:21 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 10:06:52 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 
 	i = n;
 	cifras = cont_cif(n);
-	res = (char *)malloc(sizeof(char) * cifras + 1);
+	res = (char *)malloc(sizeof(char) * (cifras + 1));
 	if (!res)
 		return (NULL);
 	res[cifras--] = 0;
@@ -55,13 +55,19 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-
 /*
-
-int	main()
+int	main(void)
 {
-	char *b;
+	char	*b;
+
+	b = ft_itoa(345);
+	puts(b);
 	b = ft_itoa(2147483647);
 	puts(b);
-}
-*/
+	b = ft_itoa(-2147483648);
+	puts(b);
+	b = ft_itoa(-214);
+	puts(b);
+	b = ft_itoa(2147);
+	puts(b);
+}*/

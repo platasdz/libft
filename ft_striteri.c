@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:29:50 by platas            #+#    #+#             */
-/*   Updated: 2022/09/20 11:50:41 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 12:05:09 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != 0)
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }

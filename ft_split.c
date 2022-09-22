@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:38:31 by platas            #+#    #+#             */
-/*   Updated: 2022/09/20 13:29:40 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 11:45:11 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,9 @@ char	*fill(char const *s, char *to_fill, size_t pos, char c)
 {
 	size_t	i;
 
-	//printf("1\n");
 	i = 0;
 	to_fill = (char *)malloc(sizeof(char) * (count_let(s, pos, c) + 1));
-	if (to_fill )
+	if (to_fill)
 	{
 		while (s[pos] != c && s[pos] != 0)
 		{
@@ -72,19 +71,6 @@ char	*fill(char const *s, char *to_fill, size_t pos, char c)
 	}
 	else
 		return (NULL);
-}
-
-size_t	ft_strlen(char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (*str != 0)
-	{
-		str++;
-		cont++;
-	}
-	return (cont);
 }
 
 void	free_matrix(size_t j, char **matrix)
@@ -111,13 +97,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (j < count_words(s, c))
 	{
-		
 		if (s[i] == c)
 			i++;
 		else
 		{
 			matrix[j] = fill(s, matrix[j], i, c);
-			puts(matrix[j]);
 			if (matrix[j] == NULL)
 				free_matrix(j, matrix);
 			i = i + ft_strlen(matrix[j]);
@@ -127,11 +111,11 @@ char	**ft_split(char const *s, char c)
 	matrix[count_words(s, c)] = NULL;
 	return (matrix);
 }
-
+/*
 int	main()
 {
 	char	*last = "potent ially long string \0";
 	char	**new;
 
 	new = ft_split(last, ' ');
-}
+}*/

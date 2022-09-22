@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:56:25 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 12:30:03 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/22 11:01:36 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strchr(const char *str, int c)
 	size_t	i;
 
 	i = 0;
-	if ((char) c == 0)
-		return ((char *)&str[i]);
-	while (str[i] != 0)
+	while (i <= ft_strlen(str))
 	{
 		if (str[i] == (char) c)
 			return ((char *)&str[i]);

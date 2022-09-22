@@ -6,24 +6,11 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:57:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/16 09:06:50 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 13:35:40 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (*str != 0)
-	{
-		str++;
-		cont++;
-	}
-	return (cont);
-}
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -34,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	len_d = ft_strlen(dest);
 	len_s = ft_strlen((char *)src);
+	if (size == 0)
+		return (len_s);
 	i = len_d;
 	j = 0;
 	if (size > 0 && size - 1 > len_d)
@@ -45,13 +34,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 			i++;
 		}
 		dest[i] = 0;
-		//return (len_d + len_s);
 	}
 	if (len_d >= size)
 		len_d = size;
 	return (len_d + len_s);
 }
-
+/*
 int main()
 {
 	size_t	size = 12;
@@ -85,4 +73,4 @@ write(1, "\n", 1);
 		puts("String truncated");
 	else
 		puts("String was fully copied");
-}
+}*/

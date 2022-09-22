@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:49:10 by platas            #+#    #+#             */
-/*   Updated: 2022/09/20 11:51:24 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 12:02:38 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != 0)
 	{
-		write(fd, s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 	write(fd, "\n", 1);

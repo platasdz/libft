@@ -6,19 +6,11 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:57:17 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 11:49:11 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 12:35:05 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
-}
 
 int	ft_atoi(const char *str)
 {

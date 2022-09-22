@@ -6,61 +6,58 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 10:10:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/20 11:53:20 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/21 13:00:36 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (*str != 0)
-	{
-		str++;
-		cont++;
-	}
-	return (cont);
-}
-
 size_t	ft_start(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
+	size_t	boo;
 
-	i = 0;
 	j = 0;
-	while (j != ft_strlen(s1))
+	while (j < ft_strlen((char *)s1))
 	{
-		while (set[i] == s1[j] && i != ft_strlen(set))
+		boo = 0;
+		i = 0;
+		while (set[i] != 0)
+		{
+			if (set[i] != s1[j])
+				boo++;
 			i++;
-		if (i != ft_strlen(set))
-			j++;
-		else
+		}
+		if (boo == ft_strlen((char *)set))
 			return (j);
-	}
-	return (NULL);
+		j++;
+	}		
+	return (0);
 }
 
 size_t	ft_end(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
+	size_t	boo;
 
-	i = 0;
-	j = ft_strlen(s1);
-	while (j > 0)
+	j = ft_strlen((char *)s1) - 1;
+	while (j >= 0)
 	{
-		while (set[i] == s1[j] && i != ft_strlen(set))
+		boo = 0;
+		i = 0;
+		while (set[i] != 0)
+		{
+			if (set[i] != s1[j])
+				boo++;
 			i++;
-		if (i != ft_strlen(set))
-			j--;
-		else
+		}
+		if (boo == ft_strlen((char *)set))
 			return (j);
+		j--;
 	}
-	return (NULL);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -68,36 +65,33 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ns;
 	size_t	start;
 	size_t	end;
+	size_t	i;
 
 	start = ft_start(s1, set);
 	end = ft_end(s1, set);
-	if (!s1)
+	i = 0;
+	if (!s1 || !set)
 		return (NULL);
-	if (!set)
-		return (s1);
 	if (start >= end)
 		return (NULL);
-	ns = (char *)malloc(sizeof(char) * end - start);
+	ns = (char *)malloc(sizeof(char) * (end - start) + 2);
 	if (!ns)
 		return (NULL);
-	while (start < end)
+	while (start <= end)
 	{
-		*ns = s1[start];
+		ns[i] = s1[start];
 		start++;
-		ns++;
+		i++;
 	}
-	*ns = 0;
+	ns[i] = 0;
 	return (ns);
 }
 /*
 int	main()
 {
-	char	*last = "ao poatentially long string";
-	char	*new;
-	char	carac[3] = "ao";
+	char	*last = "  sa   hola mundoaaa ";
+	char	*carac = "sa ";
 
 	puts(last);
-	new = ft_strtrim(last, carac);
-	puts(new);
-}
-*/
+	puts(ft_strtrim(last, carac));
+}*/
