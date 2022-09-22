@@ -6,12 +6,13 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/21 12:30:28 by platas           ###   ########.fr        #
+#    Updated: 2022/09/22 12:42:38 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = ft_atoi.c\
 ft_bzero.c\
+ft_calloc.c\
 ft_isalnum.c\
 ft_isalpha.c\
 ft_isascii.c\
@@ -65,7 +66,8 @@ all: ${NAME}
 
 clean:
 	rm -rf ${OBJS}
+fclean: clean
+	rm -f ${NAME}
 re:
 	fclean all
-
 .PHONY: all clean fclean re 
