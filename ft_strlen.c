@@ -6,13 +6,13 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:55:34 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 11:52:18 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 12:11:47 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	cont;
 

@@ -6,13 +6,13 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 09:50:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 10:06:52 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/22 12:37:03 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	cont_cif(long int n)
+static int	cont_cif(long int n)
 {
 	int	cifras;
 

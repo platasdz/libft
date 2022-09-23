@@ -6,13 +6,13 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:00:01 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 11:52:36 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 15:45:11 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)//empty, "coucou", -1
 {
 	size_t	i;
 	size_t	j;

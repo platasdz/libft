@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:06:51 by platas            #+#    #+#             */
-/*   Updated: 2022/09/22 12:38:50 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 12:13:07 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	const size_t	len = ft_strlen((char *)s1) + 1;
+	const size_t	len = ft_strlen(s1) + 1;
 	char			*temp;
 
 	temp = (char *)malloc(sizeof(char) * len);

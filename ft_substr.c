@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:07:57 by platas            #+#    #+#             */
-/*   Updated: 2022/09/22 11:20:16 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 16:07:20 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[0] = 0;
 		return (sub);
 	}
-	sub = (char *)malloc(sizeof(char) * len + 1);
+	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
 	while (len > 0)

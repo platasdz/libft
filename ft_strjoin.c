@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:21:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 11:45:45 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 12:10:44 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	len_1 = ft_strlen((char *)s1);
-	ns = (char *)malloc(sizeof(char) * len_1 + ft_strlen((char *)s2) + 1);
+	len_1 = ft_strlen(s1);
+	ns = (char *)malloc(sizeof(char) * (len_1 + ft_strlen(s2) + 1));
 	if (!ns)
 		return (NULL);
 	while (s2[j] != 0)
 	{
-		while (len_1 > 0 && s1[i] != 0)
+		while (len_1 > 0)
 		{
 			ns[i] = s1[i];
 			i++;

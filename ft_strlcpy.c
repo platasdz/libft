@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:56:04 by platas            #+#    #+#             */
-/*   Updated: 2022/09/14 17:56:19 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 12:23:41 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	i = 0;
 	len = 0;
-	while ((i + 1) < size && *(src + 1) != 0)
+	if (size == 0)
+	{
+		return (ft_strlen(src));
+	}
+	while ((i + 1) < size && *(src + i) != 0)
 	{
 		*(dest + i) = *(src + i);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:35:17 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 13:22:01 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/23 13:22:49 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (i < n && (temp1[i] != 0 || temp2[i] != 0))
+	while (i < n)
 	{
-		if (temp1[i] > temp2[i])
-			return (1);
-		if (temp2[i] > temp1[i])
-			return (-1);
+		if (*temp1 != *temp2)
+			return (*temp1 - *temp2);
+		temp1++;
+		temp2++;
 		i++;
 	}
 	return (0);
