@@ -6,20 +6,20 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:38:31 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 13:44:28 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/26 11:01:09 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *str, char c)
+static size_t	count_words(char const *str, char c)
 {
 	size_t	res;
 	size_t	i;
 
 	i = 0;
 	res = 0;
-	if (str[i] != c)
+	if (str[i] != c && str[i] != 0)
 		res++;
 	while (str[i] != 0)
 	{
@@ -39,7 +39,7 @@ size_t	count_words(char const *str, char c)
 	return (res);
 }
 
-size_t	count_let(char const *str, size_t pos, char c)
+static size_t	count_let(char const *str, size_t pos, char c)
 {
 	size_t	res;
 
@@ -52,7 +52,7 @@ size_t	count_let(char const *str, size_t pos, char c)
 	return (res);
 }
 
-char	*fill(char const *s, char *to_fill, size_t pos, char c)
+static char	*fill(char const *s, char *to_fill, size_t pos, char c)
 {
 	size_t	i;
 
@@ -73,7 +73,7 @@ char	*fill(char const *s, char *to_fill, size_t pos, char c)
 		return (NULL);
 }
 
-void	free_matrix(size_t j, char **matrix)
+static void	free_matrix(size_t j, char **matrix)
 {
 	while (j-- >= 0)
 	{
@@ -82,6 +82,19 @@ void	free_matrix(size_t j, char **matrix)
 	}
 	free(matrix);
 	matrix = NULL;
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	cont;
+
+	cont = 0;
+	while (*str != 0)
+	{
+		str++;
+		cont++;
+	}
+	return (cont);
 }
 
 char	**ft_split(char const *s, char c)
@@ -114,10 +127,13 @@ char	**ft_split(char const *s, char c)
 /*
 int	main()
 {
-	char	*last = "potent ially long string \0";
+	//char	*last = "potent ially long string \0";
 	char	**new;
-
-	new = ft_split(last, ' ');
-	
-	
+	printf("The num words is: %lu\n", count_words("", ' '));
+	new = ft_split("", ' ');
+	// while(new)
+	// {
+	// 	puts(*new);
+	// 	new++;
+	// }
 }*/
