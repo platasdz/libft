@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:21:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 12:10:44 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/26 12:23:12 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ns = (char *)malloc(sizeof(char) * (len_1 + ft_strlen(s2) + 1));
 	if (!ns)
 		return (NULL);
-	while (s2[j] != 0)
+	while (j <= ft_strlen(s2))
 	{
 		while (len_1 > 0)
 		{
