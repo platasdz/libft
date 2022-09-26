@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:38:31 by platas            #+#    #+#             */
-/*   Updated: 2022/09/26 11:01:09 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/26 12:01:24 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,19 +82,6 @@ static void	free_matrix(size_t j, char **matrix)
 	}
 	free(matrix);
 	matrix = NULL;
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (*str != 0)
-	{
-		str++;
-		cont++;
-	}
-	return (cont);
 }
 
 char	**ft_split(char const *s, char c)
