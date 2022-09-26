@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:00:01 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 15:45:11 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/26 12:44:51 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)//empty, "co
 	j = 0;
 	if (needle[i] == 0)
 		return ((char *)haystack);
-	while (i < n)
+	while (i < n && haystack[0] != 0)
 	{
 		while (haystack[i + j] == needle[j] && haystack[i + j] && (i + j) < n)
 			j++;
-		if (needle[j] == 0)
-			return ((char *)haystack + i);
+		if (needle[j] == 0){
+			return ((char *)haystack + i);}
 		i++;
 		j = 0;
 	}
@@ -35,13 +35,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)//empty, "co
 /*
 int main(void)
 {
-	char haystack[20] = "TutorialsPoint oint";
-	char needle[6] = "oint";
 	char *ret;
 	char *rat;
 
-	ret = strnstr(haystack, needle, 13);
-	rat = ft_strnstr(haystack, needle, 13);
+	ret = strnstr("", "coucou", -1);
+	rat = ft_strnstr("", "coucou", -1);
 	printf("The substring is: %s\n", ret);
 	printf("The substring is: %s\n", rat);
 
