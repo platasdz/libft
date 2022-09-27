@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 10:10:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 16:54:07 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/27 12:19:10 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ns;
-	size_t	i;
+	size_t	len;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
-	i = 0;
-	while (s1)
-	{
-		if (ft_strchr(set, *s1))
-	}
-
+	len = ft_strlen(s1);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	while (len && ft_strchr(set, s1[len]))
+		len--;
+	ns = ft_substr(s1, 0, len +1);
+	return (ns);
 }
-
+/*
 int	main()
 {
 	char	*last = "   xxxtripouille   xxx";
@@ -34,38 +35,7 @@ int	main()
 
 	puts(last);
 	puts(ft_strtrim(last, carac));
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 /*
 static size_t	ft_start(char const *s1, char const *set)

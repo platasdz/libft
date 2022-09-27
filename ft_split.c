@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:38:31 by platas            #+#    #+#             */
-/*   Updated: 2022/09/26 12:01:24 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/27 11:34:56 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	matrix = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!matrix)
 		return (NULL);
@@ -104,8 +106,7 @@ char	**ft_split(char const *s, char c)
 			matrix[j] = fill(s, matrix[j], i, c);
 			if (matrix[j] == NULL)
 				free_matrix(j, matrix);
-			i = i + ft_strlen(matrix[j]);
-			j++;
+			i = i + ft_strlen(matrix[j++]);
 		}
 	}
 	matrix[count_words(s, c)] = NULL;

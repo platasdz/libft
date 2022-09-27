@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:07:57 by platas            #+#    #+#             */
-/*   Updated: 2022/09/26 12:50:45 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/27 12:57:53 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 	{
 		sub = (char *)malloc(sizeof(char) * 1);
@@ -26,15 +28,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[0] = 0;
 		return (sub);
 	}
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
-	while (len > 0)
+	while (len-- > 0)
 	{
-		sub[i] = s[start];
-		start++;
-		i++;
-		len--;
+		sub[i++] = s[start++];
 	}
 	sub[i] = 0;
 	return (sub);

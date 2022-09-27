@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:15:48 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 13:12:43 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/27 13:01:09 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	i = 0;
-	ns = (char *)malloc(sizeof(char) * ft_strlen(s));
+	if (!s)
+		return (NULL);
+	ns = (char *)malloc(sizeof(char) * (ft_strlen(s) +1));
 	if (!ns)
 		return (NULL);
 	while (s[i] != 0)
