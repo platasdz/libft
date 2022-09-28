@@ -6,7 +6,7 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/28 12:59:05 by platas           ###   ########.fr        #
+#    Updated: 2022/09/28 13:02:08 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ ft_lstsize.c\
 ifdef WITH_BONUS
 OBJS = ${SRCS:.c=.o} ${SRCSB:.c=.o}
 else
-OBJS = ${SRCS:.c=.o}
+OBJS = ${SRCS:.c=.o} 
 endif
 
 NAME = libft.a
