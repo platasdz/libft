@@ -6,7 +6,7 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/22 12:42:38 by platas           ###   ########.fr        #
+#    Updated: 2022/09/28 12:44:59 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,14 @@ ft_strtrim.c\
 ft_substr.c\
 ft_tolower.c\
 ft_toupper.c\
+
+SRCSB = ft_lstadd_front.c\
+ft_lstclear.c\
+ft_lstdelone.c\
+ft_lstiter.c\
+ft_lstlast.c\
+ft_lstnew.c\
+ft_lstsize.c\
 
 OBJS = ${SRCS:.c=.o}
 
