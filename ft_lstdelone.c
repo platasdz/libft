@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 11:09:34 by platas            #+#    #+#             */
-/*   Updated: 2022/09/28 11:29:50 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/28 17:13:11 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	if (lst && del)
+	{	
+		del(lst->content);
+		free(lst);
+	}
 }
