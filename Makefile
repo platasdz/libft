@@ -6,7 +6,7 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/28 12:44:59 by platas           ###   ########.fr        #
+#    Updated: 2022/09/28 12:59:05 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,15 +45,21 @@ ft_substr.c\
 ft_tolower.c\
 ft_toupper.c\
 
-SRCSB = ft_lstadd_front.c\
+SRCSB = ft_lstadd_back.c\
+ft_lstadd_front.c\
 ft_lstclear.c\
 ft_lstdelone.c\
 ft_lstiter.c\
 ft_lstlast.c\
+ft_lstmap.c\
 ft_lstnew.c\
 ft_lstsize.c\
 
+ifdef WITH_BONUS
+OBJS = ${SRCS:.c=.o} ${SRCSB:.c=.o}
+else
 OBJS = ${SRCS:.c=.o}
+endif
 
 NAME = libft.a
 
@@ -62,6 +68,9 @@ INC = libft.h
 FLAGS = -Wall -Wextra -Werror
 
 CC = gcc
+
+bonus:
+	${MAKE} WITH_BONUS=1 all;
 
 .c.o:
 	${CC} -c $< -o ${<:.c=.o} -I ${INC}
