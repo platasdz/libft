@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 10:08:43 by platas            #+#    #+#             */
-/*   Updated: 2022/09/28 10:22:42 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/28 13:16:25 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		cont++;
 	}
-	cont++;
 	return (cont);
 }
