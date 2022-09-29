@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 10:18:49 by platas            #+#    #+#             */
-/*   Updated: 2022/09/28 17:13:54 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/29 15:57:29 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ t_list	*ft_lstlast(t_list *lst)
 
 	temp = lst;
 	if (!lst)
-		return (NULL);	
+		return (NULL);
 	while (lst != NULL)
 	{
 		temp = lst;
-		lst = lst->next;		
+		lst = lst->next;
 	}
 	return (temp);
 }
