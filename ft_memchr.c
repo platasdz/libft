@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:08:23 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 12:50:11 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/29 15:09:28 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*temp;
 	size_t			i;
 
-	if (!s)
-		return (NULL);
 	temp = (unsigned char *) s;
 	i = 0;
-	while (i < n && temp)
+	while (i < n)
 	{
 		if (temp[i] == (unsigned char) c)
 			return ((void *)&s[i]);
