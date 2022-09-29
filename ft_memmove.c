@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:16:41 by platas            #+#    #+#             */
-/*   Updated: 2022/09/22 10:59:37 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/29 15:04:55 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = n;
 	if (dest < src)
 		return (ft_memcpy(dest, src, n));
