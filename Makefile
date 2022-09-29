@@ -6,7 +6,7 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/28 13:02:08 by platas           ###   ########.fr        #
+#    Updated: 2022/09/29 14:16:34 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,7 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 clean:
-	rm -rf ${OBJS}
+	rm -rf ${SRCS:.c=.o} ${SRCSB:.c=.o}
 fclean: clean
 	rm -f ${NAME}
 re:
