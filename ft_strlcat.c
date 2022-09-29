@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:57:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 13:27:59 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/29 14:56:02 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len_d;
 	size_t	len_s;
 
+	if ((!src || !dest) && size == 0)
+		return (NULL);
 	len_d = ft_strlen(dest);
 	len_s = ft_strlen(src);
 	if (size <= 0)
@@ -28,11 +30,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	if (size > 0 && size - 1 > len_d)
 	{
 		while (src[j] && i < size - 1)
-		{
-			dest[i] = src[j];
-			j++;
-			i++;
-		}
+			dest[i++] = src[j++];
 		dest[i] = 0;
 	}
 	if (len_d >= size)
