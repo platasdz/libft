@@ -6,11 +6,9 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/30 12:02:45 by platas           ###   ########.fr        #
+#    Updated: 2022/09/30 13:08:01 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-NAME = libft.a
 
 SRCS = ft_atoi.c\
 ft_bzero.c\
@@ -63,33 +61,33 @@ else
 OBJS = ${SRCS:.c=.o} 
 endif
 
+NAME = libft.a
+
 INC = libft.h
 
 FLAGS = -Wall -Wextra -Werror
 
-CC = @gcc
+CC = gcc
 
-LIB = @ar rcs
-RM = @rm -f
+bonus:
+	${MAKE} WITH_BONUS=1 all;
+
+.c.o:
+	${CC} -c $< -o ${<:.c=.o} -I ${INC}
+
+${NAME}: ${OBJS}
+	ar rc ${NAME} ${OBJS}
+	ranlib ${NAME}
 
 all: ${NAME}
 
-${NAME}: ${OBJS} ${INC}
-	${LIB} ${NAME} ${OBJS}
-	ranlib ${NAME}
-
-bonus:
-	@${MAKE} WITH_BONUS=1 all;
-
-%.o: %.c
-	${CC} ${FLAGS} -c -o $@ $<
-
 clean:
-	${RM} ${SRCS:.c=.o} ${SRCSB:.c=.o}
+	rm -rf ${OBJS}
+	rm -rf ${SRCS:.c=.o} ${SRCSB:.c=.o}
 
 fclean: clean
-	${RM} ${NAME}
+	rm -f ${NAME}
 
-re:	fclean all
+re: fclean all
 
 .PHONY: all clean fclean re bonus
