@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 11:33:56 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 12:04:21 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:10:58 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,24 @@ void	ft_putnbr_fd(int n, int fd)
 
 	i = n;
 	if (i == 0)
-		write(fd, "0", 1);
-	if (i < 0)
-	{
-		i = i * -1;
-		ft_putchar_fd('-', fd);
-	}
-	if (i < 10)
-	{
-		i = i % 10;
-		ft_putchar_fd(i + 48, fd);
-	}
+		ft_putchar_fd('0', fd);
 	else
 	{
-		ft_putnbr_fd(i / 10, fd);
-		ft_putchar_fd((i % 10) + 48, fd);
+		if (i < 0)
+		{
+			i = i * -1;
+			ft_putchar_fd('-', fd);
+		}
+		if (i < 10)
+		{
+			i = i % 10;
+			ft_putchar_fd(i + 48, fd);
+		}
+		else
+		{
+			ft_putnbr_fd(i / 10, fd);
+			ft_putchar_fd((i % 10) + 48, fd);
+		}
 	}
 }
 /*
