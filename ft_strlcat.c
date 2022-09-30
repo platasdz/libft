@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:57:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/29 14:56:02 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 09:34:15 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	size_t	len_d;
 	size_t	len_s;
 
 	if ((!src || !dest) && size == 0)
-		return (NULL);
+		return (0);
 	len_d = ft_strlen(dest);
 	len_s = ft_strlen(src);
 	if (size <= 0)
