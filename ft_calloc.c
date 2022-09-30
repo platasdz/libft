@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:24:30 by platas            #+#    #+#             */
-/*   Updated: 2022/09/27 10:55:57 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 12:38:35 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void			*temp;
-	const size_t	len = count * size;
+	const size_t	len;
 
+	if (!size)
+		return (NULL);
 	if (len / count != size)
 		return (NULL);
 	temp = (void *) malloc(size * count);
