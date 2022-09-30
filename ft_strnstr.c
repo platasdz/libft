@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:00:01 by platas            #+#    #+#             */
-/*   Updated: 2022/09/27 11:32:22 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 09:51:00 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	j = 0;
 	if (needle[i] == 0)
 		return ((char *)haystack);
-	while (i < n && haystack[0] != 0)
+	while (i < n && haystack[i] != 0)
 	{
 		while (haystack[i + j] == needle[j] && haystack[i + j] && (i + j) < n)
 			j++;
