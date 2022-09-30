@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:54:56 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 11:38:28 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:59 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char *ret = ft_strrchr("rotijk", 'z');
-	char *rat = strrchr("rotijk", 'z');
-	printf("The substring is: %s\n", ret);
-	printf("The substring is: %s\n", rat);
-}*/

@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:47:53 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 11:52:54 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:38:12 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-/*
-int main()
-{
-	printf("%c", ft_tolower('A'));
-	printf("%c", ft_tolower('a'));
-	printf("%c", ft_tolower('2'));
-}*/

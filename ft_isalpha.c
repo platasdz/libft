@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:50:04 by platas            #+#    #+#             */
-/*   Updated: 2022/09/14 17:26:07 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:35:25 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-/*
-int main()
-{
-	printf("%d", ft_isalpha('5'));
-	printf("%d", ft_isalpha('o'));
-}*/

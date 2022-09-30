@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:56:04 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 12:23:41 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:28 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 		len++;
 	return (len);
 }
-/*
-int	main(void)
-{
-	char a[10]="saludos";
-	char b[10]="";
-
-	printf("%zu\n", ft_strlcpy(b, a, 4));
-	printf("%s\n%s\n", a, b);
-	printf("%zu\n", strlcpy(b, a, 4));
-	printf("%s\n%s", a, b);
-}*/

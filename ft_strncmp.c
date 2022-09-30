@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 11:43:03 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 11:52:23 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:50 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char a[] = "abcd";
-	char b[] = "abCd";
-	char c[] = "abcd";
-
-	printf("%d \n", ft_strncmp(a, c, 3));
-	printf("%d \n", ft_strncmp(a, b, 3));
-	printf("%d \n", ft_strncmp(b, c, 3));
-}*/

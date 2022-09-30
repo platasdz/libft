@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:17:44 by platas            #+#    #+#             */
-/*   Updated: 2022/09/19 09:28:19 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:36:38 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int main()
-{
-	char u[10];
-	char *a = (char *)ft_memset(u, 'a', 2);
-	char z[10];
-	char *b = (char *)memset(z, 'b', 2);
-	printf("%s\n%s\n", a, b);
-}*/

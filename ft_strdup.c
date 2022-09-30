@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:06:51 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 12:13:07 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:10 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(temp, s1, len);
 	return (temp);
 }
-
-/*
-int main()
-{
-    char source[] = "HOlaholiita";
-	char *target = ft_strdup(source);
-
-	printf("%s", target);
-
-	printf("\n");
-	char source1[] = "HOlaholiita";
-	char *target1 = strdup(source1);
-
-	printf("%s", target1);
-	return 0;
-}*/

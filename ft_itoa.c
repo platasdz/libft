@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 09:50:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/27 12:26:44 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:35:45 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,19 +69,3 @@ char	*ft_itoa(int n)
 	res = ft_put_itoa(res, i, cifras);
 	return (res);
 }
-/*
-int	main(void)
-{
-	char	*b;
-
-	b = ft_itoa(345);
-	puts(b);
-	b = ft_itoa(2147483647);
-	puts(b);
-	b = ft_itoa(-2147483648);
-	puts(b);
-	b = ft_itoa(-214);
-	puts(b);
-	b = ft_itoa(2147);
-	puts(b);
-}*/

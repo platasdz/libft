@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:15:48 by platas            #+#    #+#             */
-/*   Updated: 2022/09/27 13:01:09 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:45 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ns[i] = 0;
 	return (ns);
 }
-/*
-int	main()
-{
-	const char	*last = "ao poatentially long string";
-	//puts(ft_strmapi(last, ()));
-}*/

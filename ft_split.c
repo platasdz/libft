@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:38:31 by platas            #+#    #+#             */
-/*   Updated: 2022/09/27 11:34:56 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:36:58 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,16 +112,3 @@ char	**ft_split(char const *s, char c)
 	matrix[count_words(s, c)] = NULL;
 	return (matrix);
 }
-/*
-int	main()
-{
-	//char	*last = "potent ially long string \0";
-	char	**new;
-	printf("The num words is: %lu\n", count_words("", ' '));
-	new = ft_split("", ' ');
-	// while(new)
-	// {
-	// 	puts(*new);
-	// 	new++;
-	// }
-}*/

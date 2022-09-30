@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:52:34 by platas            #+#    #+#             */
-/*   Updated: 2022/09/15 10:08:52 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:35:29 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-/*
-int main()
-{
-	printf("%d", ft_isascii('5'));
-	printf("%d", ft_isascii('ç'));
-}*/

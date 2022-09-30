@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:55:34 by platas            #+#    #+#             */
-/*   Updated: 2022/09/23 12:11:47 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:41 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (cont);
 }
-/*
-int main()
-{
-	printf("%zu", ft_strlen("12345"));
-	printf("%zu", ft_strlen("123"));
-	printf("%zu", ft_strlen(""));
-}*/

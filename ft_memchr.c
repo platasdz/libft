@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:08:23 by platas            #+#    #+#             */
-/*   Updated: 2022/09/29 15:09:28 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:36:01 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	void *a = ft_memchr("tres", 'r', 6);
-	printf("%s", (char *)a);
-	void *b = memchr("tres", 'r', 6);
-	printf("%s", (char *)b);
-}*/

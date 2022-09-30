@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:57:17 by platas            #+#    #+#             */
-/*   Updated: 2022/09/29 15:31:46 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:35:13 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (num);
 }
-/*
-int main()
-{
-	printf("%d \n", ft_atoi("300"));
-	printf("%d \n", ft_atoi("-300"));
-	printf("%d \n", ft_atoi(" 300"));
-	printf("%d \n", ft_atoi(" --300"));
-	printf("%d \n", ft_atoi("s300"));
-	printf("%d \n", ft_atoi("  +300"));
-}*/

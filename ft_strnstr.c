@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:00:01 by platas            #+#    #+#             */
-/*   Updated: 2022/09/30 09:51:00 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:55 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main(void)
-{
-	char *ret;
-	char *rat;
-
-	ret = strnstr("", "coucou", -1);
-	rat = ft_strnstr("", "coucou", -1);
-	printf("The substring is: %s\n", ret);
-	printf("The substring is: %s\n", rat);
-
-	return (0);
-}*/

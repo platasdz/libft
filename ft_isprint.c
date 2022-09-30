@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:53:36 by platas            #+#    #+#             */
-/*   Updated: 2022/09/21 12:57:13 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:35:36 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-/*
-int main()
-{
-	printf("%d", ft_isprint('5'));
-	printf("%d", ft_isprint('€'));
-}*/

@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:21:12 by platas            #+#    #+#             */
-/*   Updated: 2022/09/30 10:44:10 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:37:15 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ns[len_1] = 0;
 	return (ns);
 }
-/*
-int	main()
-{
-	char	*first = "This is ";
-	char	*last = "a potentially long string";
-	char	*new;
-
-	puts(first);
-	puts(last);
-	new = ft_strjoin(first, last);
-	puts(new);
-}*/

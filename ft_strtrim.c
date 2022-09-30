@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 10:10:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/29 14:44:50 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:38:03 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ns = ft_substr(s1, start, end - start);
 	return (ns);
 }
-/*
-int	main()
-{
-	char	*last = "   xxxtripouille   xxx";
-	char	*carac = " x";
-
-	puts(last);
-	puts(ft_strtrim(last, carac));
-}*/

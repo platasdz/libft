@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 11:33:56 by platas            #+#    #+#             */
-/*   Updated: 2022/09/30 11:10:58 by platas           ###   ########.fr       */
+/*   Updated: 2022/09/30 11:36:45 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-/*
-int	main()
-{
-	int fd = open("o.txt", O_RDONLY);
-	ft_putnbr_fd(2147483647, fd);
-}*/
