@@ -6,7 +6,7 @@
 /*   By: platas <platas@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 09:50:40 by platas            #+#    #+#             */
-/*   Updated: 2022/09/30 11:35:45 by platas           ###   ########.fr       */
+/*   Updated: 2022/10/01 17:46:26 by platas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int	cont_cif(long int n)
 {
 	int	cifras;
 
+	cifras = 0;
 	if (n == 0)
 	{
 		cifras = 1;
