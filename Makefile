@@ -6,7 +6,7 @@
 #    By: platas <platas@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 12:30:26 by platas            #+#    #+#              #
-#    Updated: 2022/09/30 13:08:01 by platas           ###   ########.fr        #
+#    Updated: 2022/10/03 10:07:08 by platas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,9 +69,6 @@ FLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
-bonus:
-	${MAKE} WITH_BONUS=1 all;
-
 .c.o:
 	${CC} -c $< -o ${<:.c=.o} -I ${INC}
 
@@ -81,6 +78,8 @@ ${NAME}: ${OBJS}
 
 all: ${NAME}
 
+bonus:
+	${MAKE} WITH_BONUS=1 all;
 clean:
 	rm -rf ${OBJS}
 	rm -rf ${SRCS:.c=.o} ${SRCSB:.c=.o}
